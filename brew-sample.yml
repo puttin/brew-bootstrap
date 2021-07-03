@@ -1,0 +1,18 @@
+brew:
+  categories:
+    dev:
+      - git
+      - git-lfs
+    dev-ruby:
+      - rbenv
+  preset:
+    - dev
+cask:
+  preset:
+    - dev
+  categories:
+    dev:
+      - iterm2
+      - visual-studio-code
+      - fork
+      # - sourcetree
