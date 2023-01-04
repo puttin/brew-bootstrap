@@ -198,7 +198,8 @@ def cask_item_app_exist?(item)
   return nil if match.nil?
   app_name = match[1]
 
-  mdfind = `mdfind -name '#{app_name}'`
+  # get rid of annoying 'Loading keywords and predicates for locale' blabla by redirect stderr
+  mdfind = `mdfind -name '#{app_name}' 2>/dev/null`
   return true unless mdfind.empty?
   
   # maybe mdutil is off
