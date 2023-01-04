@@ -171,6 +171,7 @@ end
 
 def cask_name(item)
   cask_info_result = cask_info(item)
+  return item if cask_info_result.empty?
   cask_name = cask_info_result.lines.first.split(':').first
   return cask_name
 end
